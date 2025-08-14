@@ -1,0 +1,9 @@
+pandas
+requests
+matplotlib
+typer
+python-dotenv
+pytest
+black
+ruff
+pre-commit
