@@ -17,7 +17,7 @@ DataPulse
 
 ```bash
 # clonar e preparar
-git clone https://github.com/SEU_USER/dataPulse
+git clone https://github.com/azevedontc/dataPulse
 cd dataPulse
 python3 -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
