@@ -1,5 +1,4 @@
 # dataPulse
-DataPulse
 
 <h1 align="center">📊 DataPulse</h1>
 <p align="center">Daily, data‑driven insights in Python — fetch → clean → visualize → write.</p>
