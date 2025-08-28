@@ -2,7 +2,6 @@ import json
 import time
 from datetime import date
 from pathlib import Path
-from typing import Tuple
 
 import pandas as pd
 import requests
@@ -18,7 +17,7 @@ class WeatherSource(DataSource):
     def name(self) -> str:
         return "weather"
 
-    def _geocode(self, city: str) -> Tuple[float, float]:
+    def _geocode(self, city: str) -> tuple[float, float]:
         """Busca lat/lon da cidade (1º resultado)."""
         r = requests.get(
             self._geocode_base,
