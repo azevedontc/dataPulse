@@ -2,7 +2,6 @@
 <p align="center">Daily, data-driven insights in Python — fetch → clean → visualize → write.</p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=azevedontc&label=views&color=blueviolet" alt="views"/>
   <img src="https://img.shields.io/badge/license-MIT-informational" alt="license"/>
   <img src="https://img.shields.io/badge/python-3.11%2B-blue" alt="python"/>
 </p>
