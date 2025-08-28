@@ -21,7 +21,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
-## Output
+## Diário
 ```
 # Clima (3 dias)
 python -m datapulse.cli --source weather --city "São Paulo" --days 3
@@ -33,16 +33,7 @@ python -m datapulse.cli --source fx --base BRL --quote USD --days 7
 python -m datapulse.cli --source aqi --city "São Paulo" --days 3
 ```
 
-## Flags
-```
-# somente Markdown (sem PNG)
-python -m datapulse.cli --source weather --city "Curitiba" --days 3 --no-plot
-
-# somente PNG/Markdown (sem CSV)
-python -m datapulse.cli --source fx --base BRL --quote USD --days 7 --no-csv
-```
-
-## Weekly
+## Semanal
 ```
 # via Makefile
 make weekly-weather   # clima (últimos 7 CSVs)
@@ -53,7 +44,16 @@ make weekly-aqi       # qualidade do ar
 python -c "from datapulse import build_weekly_summary as b; b('reports','weather')"
 ```
 
-## Qualidade do Código
+## Flags
+```
+# somente Markdown (sem PNG)
+python -m datapulse.cli --source weather --city "Curitiba" --days 3 --no-plot
+
+# somente PNG/Markdown (sem CSV)
+python -m datapulse.cli --source fx --base BRL --quote USD --days 7 --no-csv
+```
+
+## Qualidade
 ```
 ruff check . --fix
 black .
@@ -79,8 +79,10 @@ git push
 
 ## Arquivos Gerados
 
+```
 reports/YYYY-MM-DD.md
 reports/img/YYYY-MM-DD_<source>.png
 reports/YYYY-MM-DD_<source>.csv
 reports/YYYY-MM-DD_<source>_weekly.md (semanal)
 reports/img/YYYY-MM-DD_<source>_weekly.png
+```
