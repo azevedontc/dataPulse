@@ -23,4 +23,16 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # gerar relatório (ex.: 3 dias, São Paulo)
-python -m datapulse.cli --source weather --city "São Paulo" --days 3
+# clima, sem CSV
+python -m datapulse.cli --source weather --city "Curitiba" --days 3 --no-csv
+
+# câmbio, só CSV (sem plot)
+python -m datapulse.cli --source fx --base BRL --quote USD --days 7 --no-plot
+
+# qualidade do ar
+python -m datapulse.cli --source aqi --city "São Paulo" --days 3
+
+# semanais
+make weekly-weather
+make weekly-fx
+make weekly-aqi
