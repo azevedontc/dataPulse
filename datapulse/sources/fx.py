@@ -1,3 +1,4 @@
+# datapulse/sources/fx.py
 import time
 from datetime import date, timedelta
 
@@ -8,7 +9,7 @@ from .base import DataSource
 
 
 class FxSource(DataSource):
-    """Câmbio via exchangerate.host (gratuito, sem API key)."""
+    """Câmbio via Frankfurter API (estável, sem API key)."""
 
     def name(self) -> str:
         return "fx"
@@ -18,25 +19,26 @@ class FxSource(DataSource):
     ) -> pd.DataFrame:
         end = date.today()
         start = end - timedelta(days=days - 1)
-        url = "https://api.exchangerate.host/timeseries"
-        params = {
-            "start_date": start.isoformat(),
-            "end_date": end.isoformat(),
-            "base": base,
-            "symbols": quote,
-        }
+        # Ex.: https://api.frankfurter.app/2025-08-30..2025-09-05?from=BRL&to=USD
+        url = f"https://api.frankfurter.app/{start.isoformat()}..{end.isoformat()}"
+        params = {"from": base, "to": quote}
 
         last = None
         for attempt in range(3):
             try:
                 r = requests.get(url, params=params, timeout=30)
                 r.raise_for_status()
-                rates = r.json()["rates"]
-                rows = [{"date": d, "rate": rates[d][quote]} for d in sorted(rates)]
+                js = r.json()
+                if "rates" not in js or not js["rates"]:
+                    raise ValueError(f"Unexpected FX payload (no 'rates'): {js}")
+                rows = []
+                for d, m in sorted(js["rates"].items()):
+                    # m é algo como {"USD": 0.19}
+                    rows.append({"date": d, "rate": float(m[quote])})
                 df = pd.DataFrame(rows)
                 df["date"] = pd.to_datetime(df["date"]).dt.date
                 return df
-            except requests.RequestException as e:
+            except Exception as e:
                 last = e
                 time.sleep(2 * (attempt + 1))
         raise last
