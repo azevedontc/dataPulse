@@ -1,6 +1,6 @@
 pandas
-requests
 matplotlib
+requests
 typer
 tabulate
 python-dotenv
