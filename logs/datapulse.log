@@ -120,3 +120,21 @@
 2025-09-17 13:34:48,783 INFO Run start: src=aqi city=Medianeira base=BRL quote=USD days=3
 2025-09-17 13:34:51,044 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-09-17 13:34:51,044 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-18 17:14:36,617 INFO Run start: src=weather city=Medianeira base=BRL quote=USD days=3
+2025-09-18 17:14:38,790 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-18 17:14:38,790 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-18 17:14:41,418 INFO Run start: src=fx city=São Paulo base=BRL quote=USD days=7
+2025-09-18 17:14:42,286 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-18 17:14:42,287 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-18 17:14:45,004 INFO Run start: src=aqi city=Medianeira base=BRL quote=USD days=3
+2025-09-18 17:14:46,805 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-18 17:14:46,805 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-19 15:49:51,335 INFO Run start: src=weather city=Medianeira base=BRL quote=USD days=3
+2025-09-19 15:49:54,189 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-19 15:49:54,190 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-19 15:50:01,692 INFO Run start: src=fx city=São Paulo base=BRL quote=USD days=7
+2025-09-19 15:50:02,808 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-19 15:50:02,808 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-19 15:50:21,155 INFO Run start: src=aqi city=Medianeira base=BRL quote=USD days=3
+2025-09-19 15:50:23,244 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-19 15:50:23,244 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
