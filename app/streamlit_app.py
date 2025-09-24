@@ -6,7 +6,7 @@ from datetime import date, timedelta
 import pandas as pd
 import streamlit as st
 
-from datapulse.datasets import load_reports_csvs
+from ..datapulse.datasets import load_reports_csvs
 
 st.set_page_config(page_title="DataPulse Dashboard", page_icon="📊", layout="wide")
 
