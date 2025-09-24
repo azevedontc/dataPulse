@@ -6,7 +6,7 @@ from datetime import date, timedelta
 import pandas as pd
 import streamlit as st
 
-from ..datapulse.datasets import load_reports_csvs
+from datapulse.datasets import load_reports_csvs
 
 st.set_page_config(page_title="DataPulse Dashboard", page_icon="📊", layout="wide")
 
@@ -36,10 +36,14 @@ if df.empty:
     st.info("Nenhum CSV encontrado em `reports/`. Gere relatórios primeiro.")
     st.stop()
 
+df["date"] = pd.to_datetime(df["date"])
+start_ts = pd.to_datetime(start)
+end_ts = pd.to_datetime(end)
+
 # filtros
 if srcs:
     df = df[df["source"].isin(srcs)]
-df = df[(df["date"] >= pd.to_datetime(start)) & (df["date"] <= pd.to_datetime(end))]
+df = df[(df["date"] >= start_ts) & (df["date"] <= end_ts)]
 
 if df.empty:
     st.warning("Sem dados para os filtros selecionados.")
@@ -52,7 +56,7 @@ with col1:
 with col2:
     st.metric("Fontes ativas", df["source"].nunique())
 with col3:
-    first, last = df["date"].min(), df["date"].max()
+    first, last = df["date"].min().date(), df["date"].max().date()
     st.metric("Período", f"{first} → {last}")
 
 st.markdown("### Série temporal")
