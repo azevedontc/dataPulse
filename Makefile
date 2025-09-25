@@ -1,10 +1,17 @@
 format:
-\tblack .
+	black .
+
 lint:
-\truff check .
+	ruff check .
+
 test:
-\tpytest -q
+	pytest -q
+
 run:
-\tpython -m datapulse.cli run --source weather --city "São Paulo" --days 3
-\tpython -m datapulse.cli --source fx --base BRL --quote USD --days 7
-\tpython -m datapulse.cli --source aqi --city "Medianeira" --days 3  
+	python -m datapulse.cli --source weather --city "São Paulo" --days 3
+	python -m datapulse.cli --source fx --base BRL --quote USD --days 7
+	python -m datapulse.cli --source aqi --city "Medianeira" --days 3
+
+dashboard:
+	python -m streamlit run app/streamlit_app.py
+

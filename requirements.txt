@@ -8,3 +8,4 @@ pytest
 black
 ruff
 pre-commit
+streamlit>=1.36.0
