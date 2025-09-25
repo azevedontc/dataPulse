@@ -24,13 +24,13 @@ pip install -r requirements.txt
 ## Diário
 ```
 # Clima (3 dias)
-python -m datapulse.cli --source weather --city "São Paulo" --days 3
+python3 -m datapulse.cli --source weather --city "São Paulo" --days 3
 
 # Câmbio BRL/USD (7 dias)
-python -m datapulse.cli --source fx --base BRL --quote USD --days 7
+python3 -m datapulse.cli --source fx --base BRL --quote USD --days 7
 
 # Qualidade do ar (AQI, 3 dias)
-python -m datapulse.cli --source aqi --city "São Paulo" --days 3
+python3 -m datapulse.cli --source aqi --city "São Paulo" --days 3
 ```
 
 ## Semanal
@@ -44,28 +44,14 @@ make weekly-aqi       # qualidade do ar
 python -c "from datapulse import build_weekly_summary as b; b('reports','weather')"
 ```
 
-## Flags
-```
-# somente Markdown (sem PNG)
-python -m datapulse.cli --source weather --city "Curitiba" --days 3 --no-plot
-
-# somente PNG/Markdown (sem CSV)
-python -m datapulse.cli --source fx --base BRL --quote USD --days 7 --no-csv
-```
-
-## Qualidade
-```
-ruff check . --fix
-black .
-pytest -q  # (opcional) pytest -q --cov=datapulse --cov-report=term-missing
-```
-
 ## Rotina
 ```
 # diário (no main)
 source .venv/bin/activate
 git pull
-python -m datapulse.cli --source weather --city "São Paulo" --days 3
+python3 -m datapulse.cli --source weather --city "São Paulo" --days 3
+python3 -m datapulse.cli --source fx --base BRL --quote USD --days 7
+python3 -m datapulse.cli --source aqi --city "São Paulo" --days 3
 git add reports/
 git commit -m "chore(reports): add daily report for YYYY-MM-DD"
 git push
@@ -77,12 +63,13 @@ git commit -m "feat(summary): add weekly weather summary for YYYY-WW"
 git push
 ```
 
-## Arquivos Gerados
-
+### Dashboard (Streamlit)
 ```
-reports/YYYY-MM-DD.md
-reports/img/YYYY-MM-DD_<source>.png
-reports/YYYY-MM-DD_<source>.csv
-reports/YYYY-MM-DD_<source>_weekly.md (semanal)
-reports/img/YYYY-MM-DD_<source>_weekly.png
+# instalar dependência (se ainda não tiver)
+pip install streamlit
+
+# rodar
+make dashboard
+# ou
+streamlit run streamlit_app.py
 ```
