@@ -195,3 +195,12 @@
 2025-09-29 16:45:24,391 INFO Run start: src=aqi city=Medianeira base=BRL quote=USD days=3
 2025-09-29 16:45:26,804 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2025-09-29 16:45:26,805 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-30 22:08:34,132 INFO Run start: src=weather city=Medianeira base=BRL quote=USD days=3
+2025-09-30 22:08:37,166 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-30 22:08:37,166 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-30 22:08:46,869 INFO Run start: src=fx city=São Paulo base=BRL quote=USD days=7
+2025-09-30 22:08:47,882 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-30 22:08:47,882 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-30 22:08:50,118 INFO Run start: src=aqi city=Medianeira base=BRL quote=USD days=3
+2025-09-30 22:08:51,932 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-09-30 22:08:51,933 INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
