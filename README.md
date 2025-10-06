@@ -55,12 +55,6 @@ python3 -m datapulse.cli --source aqi --city "São Paulo" --days 3
 git add reports/
 git commit -m "chore(reports): add daily report for YYYY-MM-DD"
 git push
-
-# semanal (1x/semana)
-make weekly-weather
-git add reports/
-git commit -m "feat(summary): add weekly weather summary for YYYY-WW"
-git push
 ```
 
 ### Dashboard (Streamlit)
